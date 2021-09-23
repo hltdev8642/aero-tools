@@ -1,0 +1,38 @@
+Setup:
+
+(1) open "xplgu.sh"
+
+(2) set XP_HOME variable to the root directory of X-Plane
+    ------------------------------------
+    example:
+            XP_HOME="/mnt/c/X-Plane 11"
+    ------------------------------------
+
+(3) to use script
+
+    --------------------------------------
+    type (from dir where script is saved):
+            source ./xplgu.sh
+    --------------------------------------
+
+(4) then to use
+
+    ---------------------------------------------------------------------------
+
+    list enabled
+        type:   `get_enabled`
+
+    list disabled
+        type:   `get_disabled`
+
+    set_disabled
+        type:   `set_disabled [Plugin Name]
+
+        example (to disable TerrainRadar plugin): `set_disabled TerrainRadar`
+
+    set_enabled
+        type:   `set_enabled [Plugin Name]
+
+        example (to enable TerrainRadar plugin):  `set_enabled TerrainRadar`
+
+    ---------------------------------------------------------------------------

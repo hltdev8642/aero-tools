@@ -1,0 +1,208 @@
+#compdef xplgu
+
+function _xplgu {
+    local _line
+
+    _arguments -C \
+        "1: :(set get fwl)" \
+        "*::arg:->args"
+
+    case $line[1] in
+        set)
+            __xplgu_set
+            ;;
+        get)
+            __xplgu_get
+            ;;
+        fwl)
+            __xplgu_fwl
+            ;;
+    esac
+}
+
+function __xplgu_fwl
+{
+       local _line
+
+    _arguments -C \
+        "1: :(set get)" \
+        "*::arg:->args"
+
+    case $line[1] in
+        set)
+            __xplgu_fwl_set
+            ;;
+        get)
+            __xplgu_fwl_get
+            ;;
+    esac
+
+}
+
+function  __xplgu_fwl_get
+{
+    local _line
+
+    _arguments -C \
+        "1: :(enabled disabled)" \
+        "*::arg:->args"
+
+        case $line[1] in
+        enabled)
+            __xplgu_fwl_get_enabled
+            ;;
+        disabled)
+            __xplgu_fwl_get_disabled
+            ;;
+        esac
+}
+
+
+function  __xplgu_fwl_set
+{
+    local _line
+
+    _arguments -C \
+        "1: :(enabled disabled)" \
+        "*::arg:->args"
+
+        case $line[1] in
+        enabled)
+            __xplgu_fwl_set_enabled
+            ;;
+        disabled)
+            __xplgu_fwl_get_enabled
+            ;;
+        esac
+}
+
+function __xplgu_set {
+    # _arguments \
+        # "1: :(enabled disabled)"  \
+
+        local _line
+
+    _arguments -C \
+        "1: :(enabled disabled)" \
+        "*::arg:->args"
+
+    case $line[1] in
+        enabled)
+            __xplgu_set_enabled
+            ;;
+        disabled)
+            __xplgu_set_disabled
+            ;;
+    esac
+
+
+}
+function __xplgu_get {
+    # _arguments \
+        # "1: :(enabled disabled)"  \
+
+
+        local _line
+
+    _arguments -C \
+        "1: :(enabled disabled)" \
+        "*::arg:->args"
+
+    case $line[1] in
+        enabled)
+            __xplgu_get_enabled
+            ;;
+        disabled)
+            __xplgu_get_disabled
+            ;;
+    esac
+
+}
+
+function __xplgu_set_enabled
+{
+
+    complist=$( ls /mnt/g/_XPLANE/X-Plane\ 11/Resources/plugins\ \(disabled\)/ -a1  | replace " " "\\ "  )
+    _arguments -C \
+        "1: :( ${complist} )" \
+        "*::arg:->args"
+}
+
+function __xplgu_set_disabled
+{
+    complist=$( ls /mnt/g/_XPLANE/X-Plane\ 11/Resources/plugins -a1  | replace " " "\\ " )
+    _arguments -C \
+        "1: :( ${complist} )" \
+        "*::arg:->args"
+}
+
+function __xplgu_get_enabled
+{
+    # local _line
+    complist=$( ls /mnt/g/_XPLANE/X-Plane\ 11/Resources/plugins -a1  | replace " " "\\ " )
+    _arguments -C \
+        "1: :( ${complist} )" \
+        "*::arg:->args"
+
+        #
+        # TODO make list of selected item (dir/file)
+        # ls -a1 $line[1]
+        #
+}
+
+function __xplgu_get_disabled
+{
+    # local _line
+    complist=$( ls /mnt/g/_XPLANE/X-Plane\ 11/Resources/plugins\ \(disabled\)/ -a1  | replace " " "\\ " )
+    _arguments -C \
+        "1: :( ${complist} )" \
+        "*::arg:->args"
+
+        #
+        # TODO make list of selected item (dir/file)
+        # ls -a1 $line[1]
+        #
+}
+
+########################################################################################################
+# TODO IMPLEMENT CASES FOR FWL
+
+function __xplgu_fwl_get_enabled
+{
+       complist=$( ls /mnt/g/_XPLANE/X-Plane\ 11/Resources/plugins/FlyWithLua/Scripts/ -a1 | replace " " "\\ " )
+    _arguments -C \
+        "1: :( ${complist} )" \
+        "*::arg:->args"
+}
+
+function __xplgu_fwl_get_disabled
+{
+       complist=$( ls /mnt/g/_XPLANE/X-Plane\ 11/Resources/plugins/FlyWithLua/Scripts\ \(disabled\)/ -a1 | replace " " "\\ " )
+    _arguments -C \
+        "1: :( ${complist} )" \
+        "*::arg:->args"
+}
+
+function __xplgu_fwl_set_disabled
+{
+       complist=$( ls /mnt/g/_XPLANE/X-Plane\ 11/Resources/plugins/FlyWithLua/Scripts/ -a1 | replace " " "\\ " )
+    _arguments -C \
+        "1: :( ${complist} )" \
+        "*::arg:->args"
+}
+
+function __xplgu_fwl_set_enabled
+{
+       complist=$( ls /mnt/g/_XPLANE/X-Plane\ 11/Resources/plugins/FlyWithLua/Scripts\ \(disabled\)/  -a1 | replace " " "\\ " )
+    _arguments -C \
+        "1: :( ${complist} )" \
+        "*::arg:->args"
+}
+
+########################################################################################################
+
+
+
+
+_xplgu
+

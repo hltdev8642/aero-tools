@@ -1,0 +1,44 @@
+#
+# acf property helper
+# will help to add missing labels/identifiers into acf files (exanokes: version, author, etc)
+#
+#
+# IN PROGRESS
+#
+# generate_acf_labels ()
+# {
+# ICAO="0"
+# author="0"
+# average_mac_acf="0"
+# callsign="0"
+# descrip="0"
+# manufacturer="0"
+# name="0"
+# notes="0"
+# studio="0"
+# tailnum="0"
+# version="0"
+# }
+# helper to read properties
+# read_property ()
+# {
+#     if [[ $1 != "0" ]]; then
+#             echo
+#     fi
+# }
+#
+# TO DO: Aircraft thumbnail generator helper function (generate_acf_thumbnail)
+#
+# P acf/_ICAO
+# P acf/_author
+# P acf/_average_mac_acf -
+# P acf/_callsign
+# P acf/_descrip
+# P acf/_manufacturer
+# P acf/_name
+# P acf/_notes
+# P acf/_studio
+# P acf/_tailnum
+# P acf/_version
+
+# `tests write_acf_prop` function

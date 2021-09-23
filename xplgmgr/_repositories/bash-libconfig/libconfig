@@ -1,0 +1,66 @@
+# libconfig - A Bash library for basic configuration files handling
+# Copyright (C) 2016  David Moreno
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+[[ -z $__libconfig_version__ ]] && {
+__libconfig_version__="1.0"
+
+function cfg_exists {
+	[[ -f "${!1}" ]] && echo 1 || echo 0
+}
+
+function cfg_isset {
+	[[ -z ${!1} ]] && echo 0 || echo 1
+}
+
+function cfg_isnum {
+	[[ ! `echo "${!1}" | grep '^[0-9]*$'` ]] && echo 0 || echo 1
+}
+
+function cfg_isint {
+	[[ ! `echo "${!1}" | grep '^[-+]?[0-9]+$'` ]] && echo 0 || echo 1
+}
+
+function cfg_isfloat {
+	[[ ! `echo "${!1}" | grep '^[-+]?[0-9]*\.?[0-9]+$'` ]] && echo 0 || echo 1
+}
+
+function cfg_exit_on_no_conf {
+	[[ ! -f ${!1} ]] && {
+		echo "FATAL: '${!1}' does not exists"
+		exit
+	}
+}
+
+function cfg_warn_on_no_conf {
+	[[ ! -f ${!1} ]] && {
+		echo "WARNING: '${!1}' does not exists"
+	}
+}
+
+function cfg_exit_on_unset {
+	[[ -z ${!1} ]] && {
+		echo "FATAL: '$1' is not set"
+		exit
+	}
+}
+
+function cfg_warn_on_unset {
+	[[ -z ${!1} ]] && {
+		echo "WARNING: '$1' is not set"
+	}
+}
+
+} #Guard end.
