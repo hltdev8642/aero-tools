@@ -1,0 +1,101 @@
+[33mcommit ded9181218895f369d1c25a29cfb9b7f6b15b6ee[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Sun Sep 12 13:09:02 2021 -0400
+
+    add links and docs
+
+[33mcommit 87d0587518355110d54b7f31a539952d6f8dc8d2[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Sat Aug 14 10:42:30 2021 -0400
+
+    fixed bug not expanding list correctly for items with a space in their name
+
+[33mcommit e52766eb5d6d50d38c2a0fa0876bb08d16d00a2c[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Sat Aug 14 10:30:31 2021 -0400
+
+    autocompletion file for xplgu
+
+[33mcommit a5a0811d8a301b16696cb5f7ff76ce7311ad6814[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Sat Aug 14 10:30:20 2021 -0400
+
+    version 3 xplgu (add list and view)
+
+[33mcommit 0ef9281bf2fea72ff1b38ea194652c77844f6ca2[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Mon Aug 9 16:01:08 2021 -0400
+
+    (1) created script: getACFPerf.sh [Gets aircraft performance data from contentzone.eurocontrol.int/aircraftperformance (by ICAO)]
+    (2) permissions fix for aero-tools dir
+
+[33mcommit 7f3c296d29fed3925d7bb3d24f91d84500765d66[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Mon Jul 12 13:52:36 2021 -0400
+
+    created new bash project: xplgmgr
+    X-Plane plugin manager / loader / unloader / etc
+
+[33mcommit 12a11622d60863e21ca4fc4ab58154f17e4a7874[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Mon Jul 12 13:49:25 2021 -0400
+
+    created new project: xplgu
+    description: X-Plane plugin and script manager (For plugins folders and FlyWithLua Scripts directory)
+
+[33mcommit b419afaedf30d1937c08f180f580c9ddcad2673f[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Mon Jul 12 13:47:20 2021 -0400
+
+    update gitignore and add old version (+ trash dir)
+
+[33mcommit c6b2f89e939cae2ccbc1b6b493296065b2df54cc[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Thu Jul 8 10:19:13 2021 -0400
+
+    Changes to be committed:
+    modified:   aero-tools/_documents/.gitkeep
+    modified:   aero-tools/_links/.gitkeep
+    modified:   aero-tools/_repositories/.gitkeep
+    modified:   aero-tools/flight-helper.sh
+    new file:   aero-tools/xprm/.gitignore
+    modified:   aero-tools/xprm/_documents/.gitkeep
+    modified:   aero-tools/xprm/_links/.gitkeep
+    modified:   aero-tools/xprm/_repositories/.gitkeep
+    new file:   aero-tools/xprm/demo-get-props-multi-acf.sh
+    new file:   aero-tools/xprm/legacy_versions/xprm_v1.0.0.sh
+
+[33mcommit b1de94eb93474629fe8ce043c1c96178c5afa88b[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Fri Jun 11 11:12:11 2021 -0400
+
+    Changes to be committed:
+    
+    (1) created new project: XPRM aka "X-Plane Resource Manager
+        (x-plane aircraft (.acf file) parser, manager, and utility)
+            new file:   xprm.sh
+    (2) added/placed legacy (basic initial) version in seperate directory
+                new file: legacy_versions/xprm_v0.1.sh
+    (3) added erroneous files with functions and help echoer scripts and
+        (did this to clean up / simplify the main code (xprm.sh)
+            new file:   xprm_extra_junk.txt
+            new file:   xprm_help_functions.sh
+            new file:   xprm_test_functions.sh
+
+[33mcommit 46174c409d65543de3e2ed9e0cc8c477ce1b93f8[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Wed Jun 2 19:38:37 2021 -0400
+
+    bugfixes in flight-helper script
+
+[33mcommit 33051807067e71678dc50248835ceb5a74cfa182[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Mon May 31 22:44:56 2021 -0400
+
+    minor fixes and improvements (+ config file for setting chart save location)
+
+[33mcommit 0a3ee4a60e8056d0ab9894ecdbed52ef8a278383[m
+Author: hltdev8642 <hltdev8642@gmail.com>
+Date:   Fri May 21 11:41:09 2021 -0400
+
+    create  (project) directory to hold all flight / flight-sim / aerospace bash projects. [So far: getFAACharts.sh and flight-helper.sh]
